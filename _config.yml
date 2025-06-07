@@ -10,8 +10,7 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: Felipe Riquelme Burgos # add your name
 author-img: david-freeman.jpg # add your photo
-about-author: Hola, ¿Qué tal? Soy un Ingeniero en Negocios Internacionales con experiencia en marketing, comercio exterior y desarrollo de negocios.
-Apasionado por los datos y la historia que tienen que contar. # add description
+about-author: Hola, ¿Qué tal? Soy un Ingeniero en Negocios Internacionales con experiencia en marketing, comercio exterior y desarrollo de negocios Apasionado por los datos y la historia que tienen que contar. # add description
 social-github: feriq-burg # add your Github handle
 social-linkedin: https://www.linkedin.com/in/felipe-alejandro-riquelme-burgos/ # add your Linkedin handle
 social-email: feliperiquelme2499@gmail.com # add your Email address
