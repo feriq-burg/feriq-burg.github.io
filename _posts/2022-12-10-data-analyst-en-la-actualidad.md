@@ -28,11 +28,11 @@ La base de datos deberá contener la siguiente información:
 ## Diagramas
 ### Diagrama entidad-relación conceptual
 
-
+![Alt text](/assets/img/der_conceptual.jpg)
 
 ### Diagrama entidad-relación técnico
 
-
+![Alt text](/assets/img/der_técnico.png)
 
 
 
