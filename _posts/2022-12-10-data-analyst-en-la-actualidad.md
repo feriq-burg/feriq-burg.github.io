@@ -128,12 +128,33 @@ La base de datos deberá contener la siguiente información:
 | Tam_empresa | Tamaño de la empresa (e.g. 11-50)   |                |               |       | varchar(20)  |
 
 
-
-
-
 ### Inserción de tablas 
 
+- 🏗️ [Script de creación de tablas](/assets/creacion_tablas_v1.sql)
 
+<pre> ```CREATE DATABASE data_analysts;
+USE data_analysts;
+
+-- Crear tabla Profesional
+CREATE TABLE Profesional (
+Id_prof INT AUTO_INCREMENT NOT NULL,
+Nombre VARCHAR(50) NOT NULL,
+Apellido VARCHAR(50) NOT NULL,
+Sexo VARCHAR(1),
+Codigo VARCHAR(3) NOT NULL,
+PRIMARY KEY (Id_prof) 
+);``` </pre>
+
+
+## Inserción de datos
+
+Si bien se mecncioní que para la inserción de los datos se realizó a través de archivos csv debido a los requerimientos del proyecto se realizó a través de un back up.
+
+📥 [Script de inserción de datos](/sql/bk_tablas_v2.sql)
+
+<pre> ```LOCK TABLES `certificacion` WRITE;
+/*!40000 ALTER TABLE `certificacion` DISABLE KEYS */;
+INSERT INTO `certificacion` VALUES (1,1,'EF SET English Certificate 71/100 (C2 Proficient)EF SET English','EF','2022-08-01',NULL,'https://www.efset.org/cert/fJNfqQ'),(2,1,'Data, data, data everywhere','Coursera','2022-03-01',NULL,'https://www.coursera.org/account/accomplishments/certificate/9FSY6LMW5WZ3')``` </pre>
 
 
 
