@@ -6,6 +6,29 @@ description: "Creación de base de datos en Mysql para analizar perfiles de anal
 tags: [MySQL, Web Scraping, Tableau ,LinkedIn, Early Project]
 ---
 
+## Indice del proyecto
+
+- [Introducción](#introducción)
+- [Notas del autor](#notas-del-autor)
+- [Objetivo](#objetivo)
+- [Modelo de Negocios](#modelo-de-negocios)
+- [Diagramas](#diagramas)
+  - [Diagrama entidad-relación conceptual](#Diagrama-entidad-relación-conceptual)
+  - [Diagrama entidad-relación técnico](#Diagrama-entidad-relación-técnico)
+- [Tablas](#tablas)
+ - [Descripción de Tablas](#descripción-de-tablas)
+ - [Inserción de Tablas](#inserción-de-tablas)
+- [Inserción de Datos](#inserción-de-datos) 
+- [Vistas SQL](#vistas)
+- [Funciones](#funciones)
+- [Stored Procedures](#stored-procedures)
+- [Triggers](#triggers)
+- [Análisis](#análisis)
+- [Herramientas usadas](#herramientas-usadas)
+- [Futuras Líneas](#Futuras-Líneas)
+- [Apartado del código](#Apartado-del-código)
+
+
 ## Introducción
 La digitalización abrió las puertas a nuevas herramientas, oportunidades y trabajos a los que miles de profesionales han logrado acceder a la industria TI, como por ejemplo, el análisis de datos o data analyst. Estas herramientas han dado la oportunidad de encontrar un cambio de profesión y propósito a muchas personas. Sin embargo, frente a la demanda de estos profesionales existen muchas ofertas para lograr esta capacitación y efectuar la transición a esta nueva era, siendo difícil encontrar un camino claro de cómo llegar a ser un analista  de datos.
 
