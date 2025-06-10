@@ -34,5 +34,115 @@ La base de datos deberá contener la siguiente información:
 
 ![Alt text](/assets/img/der_técnico.png)
 
+## Tablas
+
+### Descripción de tablas
+
+#### Tabla: Log_prof
+
+| Campo      | Descripción                           | Clave Primaria | Clave Foránea | Otros       | Tipo de Dato |
+|------------|---------------------------------------|----------------|---------------|-------------|--------------|
+| Id_prof    | Identificador del profesional         |                |               | NN          | int          |
+| Nombre     | Nombres Profesional                   |                |               |             | varchar(50)  |
+| Apellido   | Apellidos Profesional                 |                |               |             | varchar(50)  |
+| Sexo       | Masculino o Femenino                  |                |               |             | varchar(2)   |
+| Codigo     | País residencia profesional           |                |               |             | varchar(3)   |
+| User_mod   | Usuario a cargo de la modificación    |                |               | NN          | varchar(20)  |
+| Tipo_mod   | Insert, delete, update                |                |               |             | varchar(20)  |
+| Date_mod   | Fecha y hora de la modificación       |                |               |             | datetime     |
+
+#### Tabla: Log_exp
+
+| Campo      | Descripción                              | Clave Primaria | Clave Foránea | Otros       | Tipo de Dato |
+|------------|------------------------------------------|----------------|---------------|-------------|--------------|
+| Id_exp     | Identificador de experiencia             |                |               | NN          | int          |
+| Id_prof    | Identificador del profesional            |                |               |             | int          |
+| Titulo_car | Cargo de la experiencia                  |                |               |             | varchar(100) |
+| Id_emp     | Identificador de empresa                 |                |               |             | int          |
+| Fecha_in   | Fecha de inicio de la experiencia        |                |               |             | date         |
+| Fecha_en   | Fecha de término de la experiencia       |                |               |             | date         |
+| Estado     | 1 = experiencia previa; 2 = reciente     |                |               | NN          | int          |
+| User_mod   | Usuario a cargo de la modificación       |                |               | NN          | varchar(20)  |
+| Tipo_mod   | Insert, delete, update                   |                |               |             | varchar(20)  |
+| Date_mod   | Fecha y hora de la modificación          |                |               |             | datetime     |
+
+#### Tabla: Profesional
+
+| Campo    | Descripción                        | Clave Primaria | Clave Foránea | Otros       | Tipo de Dato |
+|----------|------------------------------------|----------------|---------------|-------------|--------------|
+| Id_prof  | Identificador del profesional      | ✅              |               | AI, NN       | int          |
+| Nombre   | Nombres Profesional                |                |               | NN          | varchar(50)  |
+| Apellido | Apellidos Profesional              |                |               | NN          | varchar(50)  |
+| Sexo     | Masculino o Femenino               |                |               |             | varchar(1)   |
+| Codigo   | País residencia profesional        |                | ✅             | NN          | varchar(3)   |
+
+#### Tabla: Educacion
+
+| Campo     | Descripción                            | Clave Primaria | Clave Foránea | Otros | Tipo de Dato |
+|-----------|----------------------------------------|----------------|---------------|-------|--------------|
+| Id_ed     | Número identificador de educación      | ✅              |               | AI, NN| int          |
+| Id_prof   | Identificador del profesional          |                | ✅             | NN    | int          |
+| Institucion | Nombre de la institución             |                |               |       | varchar(100) |
+| Titulo    | Nombre del grado académico             |                |               |       | varchar(150) |
+| Año_ing   | Año de ingreso                         |                |               |       | date         |
+| Año_egr   | Año de egreso                          |                |               |       | date         |
+
+#### Tabla: Experiencia
+
+| Campo      | Descripción                            | Clave Primaria | Clave Foránea | Otros | Tipo de Dato |
+|------------|----------------------------------------|----------------|---------------|-------|--------------|
+| Id_exp     | Identificador de experiencia           | ✅              |               | AI, NN| int          |
+| Id_prof    | Identificador del profesional          |                | ✅             | NN    | int          |
+| Titulo_car | Cargo de la experiencia                |                |               | NN    | varchar(100) |
+| Id_emp     | Identificador de empresa               |                | ✅             |       | int          |
+| Fecha_in   | Fecha de inicio                        |                |               |       | date         |
+| Fecha_en   | Fecha de término                       |                |               |       | date         |
+| Estado     | 1 = experiencia previa; 2 = reciente   |                |               | NN    | int          |
+
+#### Tabla: Certificacion
+
+| Campo     | Descripción                             | Clave Primaria | Clave Foránea | Otros | Tipo de Dato |
+|-----------|-----------------------------------------|----------------|---------------|-------|--------------|
+| Id_cert   | Identificador de certificación          | ✅              |               | AI, NN| int          |
+| Id_prof   | Identificador del profesional           |                | ✅             | NN    | int          |
+| Nom_cert  | Nombre de la certificación              |                |               |       | varchar(90)  |
+| Entidad   | Entidad que emite la certificación      |                |               |       | varchar(90)  |
+| Fecha_emi | Fecha de emisión                        |                |               |       | date         |
+| Fecha_venc| Fecha de vencimiento                    |                |               |       | date         |
+| Url       | Link a la certificación (si aplica)     |                |               |       | text         |
+
+#### Tabla: Pais
+
+| Campo  | Descripción        | Clave Primaria | Clave Foránea | Otros | Tipo de Dato |
+|--------|--------------------|----------------|---------------|-------|--------------|
+| Codigo | Código del país    | ✅              |               | NN    | varchar(3)   |
+| Nombre | Nombre del país    |                |               |       | varchar(50)  |
+
+#### Tabla: Empresa
+
+| Campo       | Descripción                         | Clave Primaria | Clave Foránea | Otros | Tipo de Dato |
+|-------------|-------------------------------------|----------------|---------------|-------|--------------|
+| Id_emp      | Identificador de empresa            | ✅              |               | AI, NN| int          |
+| Nom_empresa | Nombre de la empresa                |                |               |       | varchar(60)  |
+| Industria   | Rubro o especialización             |                |               |       | varchar(60)  |
+| Tam_empresa | Tamaño de la empresa (e.g. 11-50)   |                |               |       | varchar(20)  |
+
+
+
+
+
+### Inserción de tablas 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
