@@ -150,18 +150,99 @@ PRIMARY KEY (Id_prof)
 
 Si bien se mecncioní que para la inserción de los datos se realizó a través de archivos csv debido a los requerimientos del proyecto se realizó a través de un back up.
 
-📥 [Script de inserción de datos](/sql/bk_tablas_v2.sql)
+📥 [Script de inserción de datos](/assets/bk_tablas_v2.sql)
 
 <pre> ```LOCK TABLES `certificacion` WRITE;
 /*!40000 ALTER TABLE `certificacion` DISABLE KEYS */;
 INSERT INTO `certificacion` VALUES (1,1,'EF SET English Certificate 71/100 (C2 Proficient)EF SET English','EF','2022-08-01',NULL,'https://www.efset.org/cert/fJNfqQ'),(2,1,'Data, data, data everywhere','Coursera','2022-03-01',NULL,'https://www.coursera.org/account/accomplishments/certificate/9FSY6LMW5WZ3')``` </pre>
 
 
+## Vistas
+
+A continuación se presentan las 5 vistas realizadas:
+
+. v_personas_por_sexo:  Muestra la relación entre hombres y mujeres que se encuentran en la base de datos.
+
+- v _big_ companies: Muestra la cantidad de empresas que son mayores a 10.000 empleados.
+
+- v_ cargo _data: Muestra la cantidad de experiencias en la que aparece el título de “data”.
+
+- v_titulo_ing: Muestra profesionales que tengan como educación algún grado de Ingeniería.
+
+- v_cert_e_learning: Muestra las certificaciones que pertenecen a las plataformas de aprendizaje no tradicionales como Platzi, Udemy, Coderhouse.
+
+👁️ [Vistas SQL](/assets/Vistas_v2.sql)
+
+## Funciones
+
+- f_prof_nomb_exp: Se inserta algún ID de profesional existente y retorna su nombre y su cargo que se encuentre en estado = 2 de la tabla experiencia.
+
+🧠 [Funcion Nombre-Experiencia](/assets/F_prf_nomb_expv3.sql)
+
+- f_nomb_tam_emp: La función solicita un ID de empresa y retorna el nombre y la cantidad de personas que trabajan en la empresa.
+
+🧠 [Funcion Nombre-Tamaño](/assets/F_nomb_tam_empv2.sql)
+
+ ## Stored Procedures
+
+- sp_orden_educacion: Ordena la tabla educación acorde al parámetro que selecciones dentro de la tabla.
+
+⚙️ [Stored Procedure Orden Educación](/assets/SP_order_byv2.sql)
+
+- sp_in_prof: El procedimiento se encarga de insertar un nuevo profesional.
+
+⚙️ [Stored Procedure Nuevo Profesional](/assets/SP_in_newprof_v3.sql)
+
+## Triggers
+
+- Tr_ins_prof: El trigger se encarga de registrar en la tabla Log_prof cada vez que se inserta un nuevo profesional indicando el usuario que lo hizo y la fecha así como los datos del profesional.
+
+🔔 [Triggers Historial inserción](/assets/trigger_profesional_insert.sql)
+
+
+- Tr_mod_exp: El trigger se encarga de notificar cada modificación que se haga en la tabla de experiencia y se registra en la tabla Log_exp tanto el nuevo y antiguo registro.
+
+🔔 [Triggers Modificación experiencia](/assets/trigger_experiencia_update.sql)
+
+## Análisis
 
 
 
+## Herramientas usadas
 
+- LinkedIn: Si bien no es una herramienta,  es la fuente de donde se extrajo toda la información y gracias a esta se elaboró la base de datos.
+- Miro: En esta aplicación se realizó el diagrama entidad relación conceptual.
+- Phantom Buster: Software que ayudó en hacer web scraping en la página de LinkedIn.
+- Google spreadsheets: Se realizó el proceso de preparación y limpieza de la base de datos antes de ser importada a mysql. Además de los gráficos.
+- Excel: Luego de unos inconvenientes con las fechas se decidió utilizar excel para importar a mysql.
+- MySql Workbench: Creación e implementación de la base de datos.
+- Tableau Public: Utilizado para actualizar los gráficos en el apartado de análisis
 
+## Futuras Líneas
+
+A continuación se presentarán una serie de futuros lineamientos que no presentan un orden en particular relacionado a la base de datos presente y futuras bases de datos.
+- Para futuras bases de datos sería recomendable utilizar un solo idioma, preferentemente en inglés, no desde la información, sino el nombre de los objetos y sus descripciones.
+- En la tabla de educación, similar a lo que fue con experiencia, agregar un estado de 1 y 2 y eliminar las personas que agregaron enseñanza media y buscar más estudios superiores como postgrados para nutrir más el análisis.
+- Agregar al menos tres experiencias, una pasada, la de analista de datos y sí existe una futura, con el propósito de visualizar cual es el siguiente paso de los analistas de datos.
+- Hacer un criterio de selección más exhaustivo y minucioso. Al filtrar los datos, se hizo en base a la información de Phantom buster por temas de tiempo debido a que eran 300. Haber visitado los perfiles 1 a 1 -hubiera sido un análisis más fructífero.
+- En lo que respecta a funciones, stored procedures y triggers establecen alertas o mensajes de error cuando se inserta información no deseada.
+- Mejorar en el aspecto de las visualizaciones sería un paso importante. 
+- Si bien este proyecto no tuvo fines comerciales se debe ser cuidadoso con la protección y sensibilidad de los datos, especificamente las personas que fueron parte de este analisis ocultar sus nombres y solo mostrar un id.
+
+## Apartado del código
+
+Sección que agrupa los códigos mostrados a lo largo del proyecto.
+
+- 🏗️ [Script de creación de tablas](/assets/creacion_tablas_v1.sql)
+- 📥 [Script de inserción de datos](/assets/bk_tablas_v2.sql)
+- 👁️ [Vistas SQL](/assets/Vistas_v2.sql)
+- 🧠 [Funcion Nombre-Experiencia](/assets/F_prf_nomb_expv3.sql)
+- 🧠 [Funcion Nombre-Tamaño](/assets/F_nomb_tam_empv2.sql)
+- ⚙️ [Stored Procedure Orden Educación](/assets/SP_order_byv2.sql)
+- ⚙️ [Stored Procedure Nuevo Profesional](/assets/SP_in_newprof_v3.sql)
+- 🔔 [Triggers Historial inserción](/assets/trigger_profesional_insert.sql)
+- 🔔 [Triggers Modificación experiencia](/assets/trigger_experiencia_update.sql)
+  
 
 
 
