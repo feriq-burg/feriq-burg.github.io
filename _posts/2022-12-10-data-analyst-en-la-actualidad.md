@@ -34,7 +34,9 @@ La digitalización abrió las puertas a nuevas herramientas, oportunidades y tra
 
 
 ## Notas del autor
-Este proyecto se hizo en el año 2022 como primer paso hacía el análisis de datos. Para este momento se desconocían los programas como Phyton y Tableau, sin embargo se agregan unos gráficos para tener visualizaciones púlidas en el proyecto. Se utilizo webscrapping y una pequeña limpieza en excel ya que el objetivo del proyecto no era ese (se explica más abajo) 
+Este proyecto se hizo en el año 2022 como primer paso hacía el análisis de datos. Para este momento se desconocían los programas como Phyton y Tableau, sin embargo se agregan unos gráficos para tener visualizaciones púlidas en el proyecto. Se utilizo webscrapping.
+
+Todos los datos personales han sido anonimados para proteger la privacidad de las personas. Los nombres y apellidos han sido truncados y los enlaces directos (como URLs de certificaciones) clasificados como nulos. Este proyecto tiene fines exclusivamente educativos.
 
 ## Objetivo
 El objetivo de este proyecto es crear una base de datos relacional para analizar información de perfiles de LinkedIn que sean profesionales en el campo de analista de datos con el propósito de entender y establecer una ruta de aprendizaje que prepare al creador de esta base de datos para trabajar en el área de analista de datos  o sea un fuerte candidato a la hora de postular al cargo.
@@ -153,7 +155,7 @@ La base de datos deberá contener la siguiente información:
 
 ### Inserción de tablas 
 
-- 🏗️ [Script de creación de tablas](/assets/creacion_tablas_v1.sql)
+- 🏗️ [Script de creación de tablas](/assets/sql/creacion_tablas_v1.sql)
 
 <pre> ```CREATE DATABASE data_analysts;
 USE data_analysts;
@@ -173,11 +175,11 @@ PRIMARY KEY (Id_prof)
 
 Si bien se mecncioní que para la inserción de los datos se realizó a través de archivos csv debido a los requerimientos del proyecto se realizó a través de un back up.
 
-📥 [Script de inserción de datos](/assets/bk_tablas_v2.sql)
+📥 [Script de inserción de datos](/assets/sql/v4_bk_inserción_datos)
 
 <pre> ```LOCK TABLES `certificacion` WRITE;
 /*!40000 ALTER TABLE `certificacion` DISABLE KEYS */;
-INSERT INTO `certificacion` VALUES (1,1,'EF SET English Certificate 71/100 (C2 Proficient)EF SET English','EF','2022-08-01',NULL,'https://www.efset.org/cert/fJNfqQ'),(2,1,'Data, data, data everywhere','Coursera','2022-03-01',NULL,'https://www.coursera.org/account/accomplishments/certificate/9FSY6LMW5WZ3')``` </pre>
+INSERT INTO `certificacion` VALUES (1,1,'EF SET English Certificate 71/100 (C2 Proficient)EF SET English','EF','2022-08-01',NULL,NULL),(2,1,'Data, data, data everywhere','Coursera','2022-03-01',NULL,NULL)``` </pre>
 
 
 ## Vistas
@@ -194,38 +196,38 @@ A continuación se presentan las 5 vistas realizadas:
 
 - v_cert_e_learning: Muestra las certificaciones que pertenecen a las plataformas de aprendizaje no tradicionales como Platzi, Udemy, Coderhouse.
 
-👁️ [Vistas SQL](/assets/Vistas_v2.sql)
+👁️ [Vistas SQL](/assets/sql/Vistas_v2.sql)
 
 ## Funciones
 
 - f_prof_nomb_exp: Se inserta algún ID de profesional existente y retorna su nombre y su cargo que se encuentre en estado = 2 de la tabla experiencia.
 
-🧠 [Funcion Nombre-Experiencia](/assets/F_prf_nomb_expv3.sql)
+🧠 [Funcion Nombre-Experiencia](/assets/sql/F_prf_nomb_expv3.sq)
 
 - f_nomb_tam_emp: La función solicita un ID de empresa y retorna el nombre y la cantidad de personas que trabajan en la empresa.
 
-🧠 [Funcion Nombre-Tamaño](/assets/F_nomb_tam_empv2.sql)
+🧠 [Funcion Nombre-Tamaño](/assets/sql/F_nomb_tam_empv2.sql)
 
  ## Stored Procedures
 
 - sp_orden_educacion: Ordena la tabla educación acorde al parámetro que selecciones dentro de la tabla.
 
-⚙️ [Stored Procedure Orden Educación](/assets/SP_order_byv2.sql)
+⚙️ [Stored Procedure Orden Educación](/assets/sql/SP_order_byv2.sql)
 
 - sp_in_prof: El procedimiento se encarga de insertar un nuevo profesional.
 
-⚙️ [Stored Procedure Nuevo Profesional](/assets/SP_in_newprof_v3.sql)
+⚙️ [Stored Procedure Nuevo Profesional](/assets/sql/SP_in_newprof_v3.sql)
 
 ## Triggers
 
 - Tr_ins_prof: El trigger se encarga de registrar en la tabla Log_prof cada vez que se inserta un nuevo profesional indicando el usuario que lo hizo y la fecha así como los datos del profesional.
 
-🔔 [Triggers Historial inserción](/assets/trigger_profesional_insert.sql)
+🔔 [Triggers Historial inserción](/assets/sql/trigger_profesional_insert.sql)
 
 
 - Tr_mod_exp: El trigger se encarga de notificar cada modificación que se haga en la tabla de experiencia y se registra en la tabla Log_exp tanto el nuevo y antiguo registro.
 
-🔔 [Triggers Modificación experiencia](/assets/trigger_experiencia_update.sql)
+🔔 [Triggers Modificación experiencia](/assets/sql/trigger_experiencia_update.sql)
 
 ## Análisis
 
@@ -256,15 +258,15 @@ A continuación se presentarán una serie de futuros lineamientos que no present
 
 Sección que agrupa los códigos mostrados a lo largo del proyecto.
 
-- 🏗️ [Script de creación de tablas](/assets/creacion_tablas_v1.sql)
-- 📥 [Script de inserción de datos](/assets/bk_tablas_v2.sql)
-- 👁️ [Vistas SQL](/assets/Vistas_v2.sql)
-- 🧠 [Funcion Nombre-Experiencia](/assets/F_prf_nomb_expv3.sql)
-- 🧠 [Funcion Nombre-Tamaño](/assets/F_nomb_tam_empv2.sql)
-- ⚙️ [Stored Procedure Orden Educación](/assets/SP_order_byv2.sql)
-- ⚙️ [Stored Procedure Nuevo Profesional](/assets/SP_in_newprof_v3.sql)
-- 🔔 [Triggers Historial inserción](/assets/trigger_profesional_insert.sql)
-- 🔔 [Triggers Modificación experiencia](/assets/trigger_experiencia_update.sql)
+- 🏗️ [Script de creación de tablas](/assets/sql/creacion_tablas_v1.sql)
+- 📥 [Script de inserción de datos](/assets/sql/v4_bk_inserción_datos)
+- 👁️ [Vistas SQL](/assets/sql/Vistas_v2.sql)
+- 🧠 [Funcion Nombre-Experiencia](/assets/sql/F_prf_nomb_expv3.sq)
+- 🧠 [Funcion Nombre-Tamaño](/assets/sql/F_nomb_tam_empv2.sql)
+- ⚙️ [Stored Procedure Orden Educación](/assets/sql/SP_order_byv2.sql)
+- ⚙️ [Stored Procedure Nuevo Profesional](/assets/sql/SP_in_newprof_v3.sql)
+- 🔔 [Triggers Historial inserción](/assets/sql/trigger_profesional_insert.sql)
+- 🔔 [Triggers Modificación experiencia](/assets/sql/trigger_experiencia_update.sql)
   
 
 
