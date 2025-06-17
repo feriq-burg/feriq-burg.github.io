@@ -231,10 +231,10 @@ A continuación se presentan las 5 vistas realizadas:
 
 ## Análisis
 
-c
-
-<iframe src="https://public.tableau.com/views/data_analyst_v2/Gnero?:language=es-ES&:display_count=n&:origin=viz_share_link"
-        width="100%" height="600px" frameborder="0"></iframe>
+<div style="margin-bottom: 20px;">
+  <iframe src="https://public.tableau.com/views/data_analyst_v2/Gnero?:language=es-ES&:display_count=n&:origin=viz_share_link"
+          width="100%" height="600px" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ## Herramientas usadas
 
