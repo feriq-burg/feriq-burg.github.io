@@ -231,10 +231,152 @@ A continuación se presentan las 5 vistas realizadas:
 
 ## Análisis
 
-<div style="margin-bottom: 20px;">
-  <iframe src="https://public.tableau.com/views/data_analyst_v2/Gnero?:language=es-ES&:display_count=n&:origin=viz_share_link"
-          width="100%" height="600px" frameborder="0" allowfullscreen></iframe>
-</div>
+
+![Alt text](/assets/img/tableau/genero.jpg)
+
+Respecto a la distribución por género podemos visualizar que la mayoría esta establecida por hombres superando el 60% del total de profesionales.
+
+
+![Alt text](/assets/img/tableau/tamaño_empresa.jpg)
+
+En lo que respecta a las empresas según tamaño, las grandes empresas son las que destacan en lo que respecta a la base de datos sin embargo no presenta un orden decreciente, es decir, las empresas mas grandes son las que más se repiten, sino que sorprende la presencia de empresas entre 11-50 colaboradores en el 4° lugar. Al parecer otros factores inciden en la necesidad de estos profesionales aparte del tamaño
+
+![Alt text](/assets/img/tableau/rubro.jpg)
+
+En el rubro sorprende el rubro de la educación liderando con 10 empresas, ignnorando los 16 valores nulos, en conjunto con servicios financieros, seguidos de retail, banca y logística. En lo que respecta al rubro de educación destacan las universidades tradicionales y 1 startup de educación tecnológica.
+
+
+
+</head>
+<body>
+    <table class="data-table">
+        <caption>Instituciones Educativas </caption>
+        <thead>
+            <tr>
+                <th>Institución</th>
+                <th>Cantidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pontificia Universidad Católica de Chile</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>Universidad del Desarrollo</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>Universidad Adolfo Ibáñez</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td>Universidad de Chile</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td>Universidad de Valparaíso</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>Universidad Técnica Federico Santa María</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>Universidad de Santiago de Chile</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>Pontificia Universidad Católica de Valparaíso</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>Universidad Andrés Bello</td>
+                <td>6</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+
+Respecto a las instituciones educativas más populares por los profesionales se destacan la Pontifica Universidad Católica de Chile, Universidad del Desarrollo, Universidad Adolfo ibañez y Universidad de Chile.
+
+Es importante destacar que el top 1, La Pontificia Universidad Católica de Chile también es clasificada como la mejor universidad de Chile en el puesto 121 mundial según QS World University Rankings 2023: Top global universities. (https://www.topuniversities.com/world-university-rankings/2023?countries=cl)
+
+
+</head>
+<body>
+    <table class="data-table">
+        <caption>Estudios de pregrado </caption>
+        <thead>
+            <tr>
+                <th>Carrera</th>
+                <th>Cantidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ingeniería Comercial</td>
+                <td>27</td>
+            </tr>
+            <tr>
+                <td>Ingeniería Civil Industrial</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td>Otras Ingenierías</td>
+                <td>19</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+
+
+Dentro de los estudios de pregrado las carreras mas populares son las ingenierías, especificamente comercial y civil industrial seguido del resto de ingenierías como Ingeniero Agrónomo o Ingeniero en Minas, destacan campos como Publicistas, un geologo y un abogado.
+
+
+
+
+</head>
+<body>
+    <table class="data-table">
+        <caption> Estudios de Postgrado </caption>
+        <thead>
+            <tr>
+                <th>Estudio</th>
+                <th>Cantidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Diplomados ciencia de datos o analitica</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>Master en ciencia de datos, AI o analítica</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Master en economía y Negocios</td>
+                <td>5</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+
+
+En lo que respecta a postgrados destacamos los diplomados en datos o relacionados por sobre un máster en cualquier otro tipo ya sean MBA's o relacionado a datos.
+
+
+
+Las certificaciones  o estudios no tradicionales son barreras mas fáciles de acceder por los procesos de admisión y costos que conlleva la educación tradicional que tienen otro tipo de enseñanza mas distuptivo y accesible como se mencionó. Dentro de las certificaciones mas destacadas tenemos las siguientes.
+
+
+
+
+Respecto a las instituciones hay.
 
 ## Herramientas usadas
 
