@@ -35,12 +35,12 @@ La digitalización abrió las puertas a nuevas herramientas, oportunidades y tra
 
 
 ## Notas del autor
-Este proyecto se hizo en el año 2022 como primer paso hacía el análisis de datos. Para este momento se desconocían los programas como Phyton y Tableau, sin embargo se agregan unos gráficos para tener visualizaciones púlidas en el proyecto. Se utilizo webscrapping.
+Este proyecto se hizo en el año 2022 como primer paso hacía el análisis de datos. Para este momento se desconocían los programas como Phyton y Tableau, así como tambien los procesos de limpieza de datos, sin embargo, se agregan unos gráficos para tener visualizaciones púlidas en el proyecto hechos en tableau que por limitantes de github pages no puede ser embedido sino son imágenes. Se utilizo webscrapping para la obtención de los datos.
 
 Todos los datos personales han sido anonimados para proteger la privacidad de las personas. Los nombres y apellidos han sido truncados y los enlaces directos (como URLs de certificaciones) clasificados como nulos. Este proyecto tiene fines exclusivamente educativos.
 
 ## Objetivo
-El objetivo de este proyecto es crear una base de datos relacional para analizar información de perfiles de LinkedIn que sean profesionales en el campo de analista de datos con el propósito de entender y establecer una ruta de aprendizaje que prepare al creador de esta base de datos para trabajar en el área de analista de datos  o sea un fuerte candidato a la hora de postular al cargo.
+El objetivo de este proyecto es crear una base de datos relacional y desarrollar objetos que permitan su mantenimiento basada en un modelo de negocios. La base de datos contiene información de perfiles de LinkedIn que sean profesionales en el campo de analista de datos con el propósito de entender y establecer una ruta de aprendizaje que prepare al creador de esta base de datos para trabajar en el área de analista de datos o sea un fuerte candidato a la hora de postular al cargo.
 
 ## Modelo de Negocios
 La base de datos deberá contener la siguiente información:
@@ -174,7 +174,7 @@ PRIMARY KEY (Id_prof)
 
 ## Inserción de datos
 
-Si bien se mecncioní que para la inserción de los datos se realizó a través de archivos csv debido a los requerimientos del proyecto se realizó a través de un back up.
+Si bien se mencionó que para la inserción de los datos se realizó a través de archivos csv debido a los requerimientos del proyecto se realizó a través de un back up.
 
 📥 [Script de inserción de datos](/assets/sql/v4_bk_inserción_datos)
 
@@ -187,7 +187,7 @@ INSERT INTO `certificacion` VALUES (1,1,'EF SET English Certificate 71/100 (C2 P
 
 A continuación se presentan las 5 vistas realizadas:
 
-. v_personas_por_sexo:  Muestra la relación entre hombres y mujeres que se encuentran en la base de datos.
+- v_personas_por_sexo:  Muestra la relación entre hombres y mujeres que se encuentran en la base de datos.
 
 - v _big_ companies: Muestra la cantidad de empresas que son mayores a 10.000 empleados.
 
@@ -232,15 +232,16 @@ A continuación se presentan las 5 vistas realizadas:
 
 ## Análisis
 
+Los tres primeros gráficos fueron creados en Tableau Public, sin embargo, como se mencionó más arriba por limitantes de github pages no puede ser embedido.
 
 ![Alt text](/assets/img/tableau/genero.jpg)
 
-Respecto a la distribución por género podemos visualizar que la mayoría esta establecida por hombres superando el 60% del total de profesionales.
+Respecto a la distribución por género podemos visualizar que la mayoría esta establecida por hombres superando el 65% del total de profesionales.
 
 
 ![Alt text](/assets/img/tableau/tamaño_empresa.jpg)
 
-En lo que respecta a las empresas según tamaño, las grandes empresas son las que destacan en lo que respecta a la base de datos sin embargo no presenta un orden decreciente, es decir, las empresas mas grandes son las que más se repiten, sino que sorprende la presencia de empresas entre 11-50 colaboradores en el 4° lugar. Al parecer otros factores inciden en la necesidad de estos profesionales aparte del tamaño
+En lo que respecta a las empresas según tamaño, las grandes empresas son las que destacan en lo que respecta a la base de datos sin embargo no presenta un orden decreciente, es decir, las empresas mas grandes son las que más se repiten, sino que sorprende la presencia de empresas entre 11-50 colaboradores en el 4° lugar. Al parecer otros factores inciden en la necesidad de estos profesionales aparte del tamaño.
 
 ![Alt text](/assets/img/tableau/rubro.jpg)
 
@@ -248,7 +249,7 @@ En el rubro sorprende el rubro de la educación liderando con 10 empresas, ignno
 
 
 
-</head>
+
 <body>
     <table class="data-table">
         <caption>Instituciones Educativas </caption>
@@ -298,7 +299,7 @@ En el rubro sorprende el rubro de la educación liderando con 10 empresas, ignno
         </tbody>
     </table>
 </body>
-</html>
+
 
 Respecto a las instituciones educativas más populares por los profesionales se destacan la Pontifica Universidad Católica de Chile, Universidad del Desarrollo, Universidad Adolfo ibañez y Universidad de Chile.
 
@@ -373,7 +374,7 @@ En lo que respecta a postgrados destacamos los diplomados en datos o relacionado
 
 
 
-Las certificaciones con un modelo de enseñanza más disruptivo posee barreras de entrada más accesible por costos y admisión. Las entidades que imparten estas certificaciones más populares son:
+Las certificaciones son un modelo de enseñanza más disruptivo que posee barreras de entrada más accesibles por costos y admisión. Las entidades más populares que imparten estas certificaciones son:
 
 </head>
 <body>
