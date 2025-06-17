@@ -371,12 +371,85 @@ En lo que respecta a postgrados destacamos los diplomados en datos o relacionado
 
 
 
-Las certificaciones  o estudios no tradicionales son barreras mas fáciles de acceder por los procesos de admisión y costos que conlleva la educación tradicional que tienen otro tipo de enseñanza mas distuptivo y accesible como se mencionó. Dentro de las certificaciones mas destacadas tenemos las siguientes.
+
+Las certificaciones con un modelo de enseñanza más disruptivo posee barreras de entrada más accesible por costos y admisión. Las entidades que imparten estas certificaciones más populares son:
+
+</head>
+<body>
+    <table class="data-table">
+        <caption>Entidades Certificadoras </caption>
+        <thead>
+            <tr>
+                <th>Institución</th>
+                <th>Cantidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Udemy</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>Coursera</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>Google</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>LinkedIn</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td>Desafío Latam</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Escuela de Postgrado y Educación Continua FCFM Universidad de Chile</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>Platzi</td>
+                <td>6</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+
+Dentro de las certificaciones más buscadas se encuentran las siguientes
+
+| Certificación | Cantidad | 
+|---------------|----------|
+| Power BI      | 18 |
+| Python        | 16 |
+| SQL           | 10 | 
+| Inglés        | 10 |
+| Excel         | 5  |
 
 
+La siguiente tabla muestra algunos profesionales con su cargo anterior y actual con el objetivo de entender cuál sería el siguiente paso profesional que toman aquellos profesionales que trabajan como analista de datos:
+
+| Nombre | Apellido | Cargo anterior                                        | Cargo actual                                                  | Empresa anterior                           | Empresa actual                                | Fin cargo anterior | Inicio cargo actual |
+|--------|----------|--------------------------------------------------------|----------------------------------------------------------------|--------------------------------------------|------------------------------------------------|--------------------|----------------------|
+| Kar    | Cam      | Analista de Datos y Licitaciones                      | Ingeniero de Machine Learning y Desarrollo de Inteligencia Artificial Generativa | Universidad del Desarrollo                | Universidad del Desarrollo                     | 2022-10-06         | 2023-08-01           |
+| Mar    | Alb      | Analista de Datos Área Comercial                      | Senior Business Development Representative                     | Finning                                    | Finning                                        | 2023-05-01         | 2023-05-01           |
+| Gon    | Día      | Práctica Analista de Datos                            | Analista de datos                                              | Xepelin                                    | Xepelin                                        | 2022-02-01         | 2022-03-01           |
+| Dan    | Bra      | Data Analyst                                          | Data Engineer                                                  | ChileCompra                                | ChileCompra                                    | 2023-07-01         | 2023-07-01           |
+| Cat    | Sal      | Data Analyst                                          | International Business Development Representative             | University of Oxford                       | Pontificia Universidad Católica de Chile       | 2020-09-01         | 2022-04-01           |
+| Alv    | Mun      | Data Analyst - Customer Experience                    | Project Engineer_Customer Experience                           | Wird.                                      | Wird.                                          | 2023-10-06         | 2022-04-01           |
+| Jos    | Jab      | Analista de datos                                     | Business Analyst                                               | Liberty Seguros Andes                      | Desis Limitada - Facturación.cl                | 2023-06-01         | 2023-07-01           |
+| Car    | Ort      | Tutor de Sucursal - Analista de Datos                 | Python Developer y Analista de Datos                           | BIWISER                                    | Servicios Financieros - Lider BCI              | 2021-01-01         | 2021-02-01           |
+| Rod    | Roj      | Analista de datos                                     | Analista BI                                                    | Grupo Unicomer / Unicomer Group            | SMU S.A. (Unimarc, M10, Alvi, Ok Market y Super10) | 2023-02-01         | 2023-02-01           |
+| Jos    | Qui      | Analista de Datos y Procesos Post Venta              | DATA ANALYST                                                   | Caja Los Andes                             | BCI Seguros                                    | 2021-07-01         | 2021-07-01           |
+| Pau    | Aed      | Analista de datos                                     | Data Analyst                                                   | Cenabast                                   | Walmart Chile                                  | 2022-06-01         | 2022-07-01           |
+| Ale    | Fon      | Analista de datos e información                       | Product Owner                                                  | Colegio de Ingenieros de Chile             | Colegio de Ingenieros de Chile                 | 2023-05-01         | 2023-06-01           |
+| Con    | Cis      | Analista de datos                                     | Configuration & Data Analyst                                   | Automotores Gildemeister SpA              | REWORTH                                       | 2023-02-01         | 2023-03-01           |
+| Fra    | Opo      | Data Analyst                                          | Analista Business Intelligence                                 | Enfoca Digital                             | Walmart Chile                                  | 2023-05-01         | 2023-08-01           |
+| Jes    | Mas      | Analista de Datos - Business intelligence analyst     | Científico de datos - Modelador Estadístico                   | Cencosud Scotiabank                         | Cencosud S.A.                                   | 2021-12-01         | 2021-12-01           |
 
 
-Respecto a las instituciones hay.
 
 ## Herramientas usadas
 
