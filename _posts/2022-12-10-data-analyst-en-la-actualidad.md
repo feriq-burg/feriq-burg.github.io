@@ -305,7 +305,7 @@ Respecto a las instituciones educativas más populares por los profesionales se 
 Es importante destacar que el top 1, La Pontificia Universidad Católica de Chile también es clasificada como la mejor universidad de Chile en el puesto 121 mundial según QS World University Rankings 2023: Top global universities. (https://www.topuniversities.com/world-university-rankings/2023?countries=cl)
 
 
-</head>
+
 <body>
     <table class="data-table">
         <thead>
@@ -330,7 +330,7 @@ Es importante destacar que el top 1, La Pontificia Universidad Católica de Chil
         </tbody>
     </table>
 </body>
-</html>
+
 
 
 Dentro de los estudios de pregrado las carreras mas populares son las ingenierías, especificamente comercial y civil industrial seguido del resto de ingenierías como Ingeniero Agrónomo o Ingeniero en Minas, destacan campos como Publicistas, un geologo y un abogado.
@@ -338,7 +338,7 @@ Dentro de los estudios de pregrado las carreras mas populares son las ingenierí
 
 
 
-</head>
+
 <body>
     <table class="data-table">
         <thead>
@@ -363,7 +363,7 @@ Dentro de los estudios de pregrado las carreras mas populares son las ingenierí
         </tbody>
     </table>
 </body>
-</html>
+
 
 
 En lo que respecta a postgrados destacamos los diplomados en datos o relacionados por sobre un máster en cualquier otro tipo ya sean MBA's o relacionado a datos.
@@ -373,7 +373,7 @@ En lo que respecta a postgrados destacamos los diplomados en datos o relacionado
 
 Las certificaciones son un modelo de enseñanza más disruptivo que posee barreras de entrada más accesibles por costos y admisión. Las entidades más populares que imparten estas certificaciones son:
 
-</head>
+
 <body>
     <table class="data-table">
         <thead>
@@ -414,7 +414,7 @@ Las certificaciones son un modelo de enseñanza más disruptivo que posee barrer
         </tbody>
     </table>
 </body>
-</html>
+
 
 Dentro de las certificaciones más buscadas se encuentran las siguientes
 
