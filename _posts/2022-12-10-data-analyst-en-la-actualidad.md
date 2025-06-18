@@ -158,7 +158,7 @@ La base de datos deberá contener la siguiente información:
 
 ### Inserción de tablas 
 
-- 🏗️ [Script de creación de tablas](/assets/sql/creacion_tablas_v1.sql)
+🏗️ [Script de creación de tablas](/assets/sql/creacion_tablas_v1.sql)
 
 <pre> ```CREATE DATABASE data_analysts;
 USE data_analysts;
@@ -205,13 +205,13 @@ A continuación se presentan las 5 vistas realizadas:
 
 - f_prof_nomb_exp: Se inserta algún ID de profesional existente y retorna su nombre y su cargo que se encuentre en estado = 2 de la tabla experiencia.
 
-🧠 [Funcion Nombre-Experiencia](/assets/sql/F_prf_nomb_expv3.sq)
+🧠 [Funcion Nombre-Experiencia](/assets/sql/F_prf_nomb_expv3.sql)
 
 - f_nomb_tam_emp: La función solicita un ID de empresa y retorna el nombre y la cantidad de personas que trabajan en la empresa.
 
 🧠 [Funcion Nombre-Tamaño](/assets/sql/F_nomb_tam_empv2.sql)
 
- ## Stored Procedures
+## Stored Procedures
 
 - sp_orden_educacion: Ordena la tabla educación acorde al parámetro que selecciones dentro de la tabla.
 
@@ -466,11 +466,10 @@ La siguiente tabla muestra algunos profesionales con su cargo anterior y actual 
 A continuación se presentarán una serie de futuros lineamientos que no presentan un orden en particular relacionado a la base de datos presente y futuras bases de datos.
 - Para futuras bases de datos sería recomendable utilizar un solo idioma, preferentemente en inglés, no desde la información, sino el nombre de los objetos y sus descripciones.
 - En la tabla de educación, similar a lo que fue con experiencia, agregar un estado de 1 y 2 y eliminar las personas que agregaron enseñanza media y buscar más estudios superiores como postgrados para nutrir más el análisis.
-- Agregar al menos tres experiencias, una pasada, la de analista de datos y sí existe una futura, con el propósito de visualizar cual es el siguiente paso de los analistas de datos.
-- Hacer un criterio de selección más exhaustivo y minucioso. Al filtrar los datos, se hizo en base a la información de Phantom buster por temas de tiempo debido a que eran 300. Haber visitado los perfiles 1 a 1 -hubiera sido un análisis más fructífero.
-- En lo que respecta a funciones, stored procedures y triggers establecen alertas o mensajes de error cuando se inserta información no deseada.
-- Mejorar en el aspecto de las visualizaciones sería un paso importante. 
-- Si bien este proyecto no tuvo fines comerciales se debe ser cuidadoso con la protección y sensibilidad de los datos, especificamente las personas que fueron parte de este analisis ocultar sus nombres y solo mostrar un id.
+- Agregar al menos tres experiencias, una pasada, la de analista de datos y sí existe una futura, con el propósito de visualizar cual es el siguiente paso de los analistas de datos y de donde vienen si es que hicieron un cambio de profesión en todos los profesionales.
+- En lo que respecta a funciones, stored procedures y triggers establecen alertas o mensajes de error cuando se inserta información no deseada. 
+- Respecto al proceso de análisis persé es necesario buscar una muestra representativa o al menos de un número más elevado, para poder realizar una efectiva limpieza de información irelevante, y corregir signos que la base de datos no es capaz de entender por ejemplo las tildes.
+  
 
 ## Apartado del código
 
