@@ -252,7 +252,6 @@ En el rubro sorprende el rubro de la educación liderando con 10 empresas, ignno
 
 <body>
     <table class="data-table">
-        <caption>Instituciones Educativas </caption>
         <thead>
             <tr>
                 <th>Institución</th>
@@ -309,7 +308,6 @@ Es importante destacar que el top 1, La Pontificia Universidad Católica de Chil
 </head>
 <body>
     <table class="data-table">
-        <caption>Estudios de pregrado </caption>
         <thead>
             <tr>
                 <th>Carrera</th>
@@ -343,7 +341,6 @@ Dentro de los estudios de pregrado las carreras mas populares son las ingenierí
 </head>
 <body>
     <table class="data-table">
-        <caption> Estudios de Postgrado </caption>
         <thead>
             <tr>
                 <th>Estudio</th>
@@ -379,7 +376,6 @@ Las certificaciones son un modelo de enseñanza más disruptivo que posee barrer
 </head>
 <body>
     <table class="data-table">
-        <caption>Entidades Certificadoras </caption>
         <thead>
             <tr>
                 <th>Institución</th>
