@@ -5,7 +5,7 @@ date: 2022-12-10
 img: how-to-start.jpg # Add image post (optional)
 description: "Creación de base de datos en Mysql para analizar perfiles de analistas de datos de Linkedin en Chile"
 tags: [MySQL, Web Scraping, Tableau ,LinkedIn, Early Project]
-excerpt: "Creación de una base de datos relacional y desarrollo de objetos que permitan su mantenimiento sobre perfiles de analistas de datos en LinkedIn en Chile para su posterior análisis"
+excerpt: "Creación de una base de datos relacional y desarrollo de objetos que permitan su mantenimiento sobre perfiles de analistas de datos en LinkedIn en Chile para su posterior análisis."
 
 ---
 
