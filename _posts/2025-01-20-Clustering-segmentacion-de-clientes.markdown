@@ -72,7 +72,7 @@ Como se mencionó más arriba la distribución del dataset se encuentra a nivel 
 
 ## Análisis
 
-En lo que respecta a la distrubución de la data finalmente tenemos información de aproximadamente 4000 clientes durante un año calendario del supermercado FreshMart. A pesar de haber eliminado valores atípicos usando el rango intercuartil, siguen presentándose valores fuera de la norma en las variables cuantitativas como se muestra en el gráfico de más abajo.
+En lo que respecta a la distrubución de los datos finalmente tenemos información de aproximadamente 4000 clientes durante un año calendario del supermercado FreshMart. A pesar de haber eliminado valores atípicos usando el rango intercuartil, siguen presentándose valores fuera de la norma en las variables cuantitativas como se muestra en el gráfico de más abajo.
 
 (Gráfico de análisis)
 
