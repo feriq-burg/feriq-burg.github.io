@@ -2,6 +2,7 @@
 layout: post
 title: "Segmentación de Clientes con Clustering en FreshMart"
 date: 2025-01-20
+img: cov_img_clust.jpg
 excerpt: "Segmentación de clientes mediante RFM y algoritmos de clustering para personalizar la estrategia de marketing de un supermercado."
 tags: [Segmentación, Clustering] # add tag
 ---
