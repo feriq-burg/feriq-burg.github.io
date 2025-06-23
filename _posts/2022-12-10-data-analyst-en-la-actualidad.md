@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Data Analyst en la Actualidad"
-date: 2022-12-10
+date: 2023-12-10
 img: how-to-start.jpg # Add image post (optional)
 description: "Creación de base de datos en Mysql para analizar perfiles de analistas de datos de Linkedin en Chile"
 tags: [MySQL, Web Scraping, Tableau ,LinkedIn, Early Project]
