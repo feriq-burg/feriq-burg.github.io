@@ -1,22 +1,139 @@
 ---
 layout: post
-title: The Best Organizer Software
-date: 2017-09-12 00:00:00 +0300
-description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
-img: software.jpg # Add image post (optional)
-tags: [Productivity, Software] # add tag
+title: "Segmentación de Clientes con Clustering en FreshMart"
+excerpt: "Segmentación de clientes mediante RFM y algoritmos de clustering para personalizar la estrategia de marketing de un supermercado."
+tags: [Segmentación, Clustering] # add tag
 ---
 
-Church-key blog messenger bag, selfies umami man braid mlkshk. Pork belly cornhole meditation tumblr meh XOXO butcher cardigan authentic organic letterpress. Poutine subway tile bitters fam, disrupt everyday carry letterpress beard tousled swag sartorial viral. Retro af 3 wolf moon heirloom, pork belly man bun DIY chillwave. Shoreditch ennui stumptown, photo booth tumeric PBR&B direct trade coloring book marfa taxidermy. Gentrify brunch typewriter woke freegan. Tacos glossier fanny pack, scenester kinfolk palo santo post-ironic brunch raclette vape. Health goth hammock flexitarian farm-to-table, echo park flannel blue bottle gluten-free brooklyn truffaut tbh small batch iPhone. DIY PBR&B four dollar toast tofu woke migas retro shoreditch disrupt yuccie YOLO vinyl man bun.
+## Índice
 
-### Church-key blog messenger bag
+1. [Contexto del Problema](#contexto-del-problema)
+2. [Objetivos de Negocio](#objetivos-de-negocio)
+3. [Exploración y Preparación de los Datos](#exploración-y-preparación-de-los-datos)
+4. [Transformación de Variables (RFM)](#ingeniería-de-variables-rfm)
+5. [Análisis](Análisis)
+6. [Clustering y Evaluación](#clustering-y-evaluación)
+7. [Segmentos y Conclusiones](#segmentos-y-conclusiones)
+8. [Repositorio del Código](#repositorio-del-código)
 
-Tumblr bicycle rights intelligentsia, food truck migas raw denim whatever portland gastropub messenger bag chartreuse vape lomo coloring book subway tile. Yr pabst meggings tattooed four dollar toast. Iceland ramps readymade selfies synth ennui letterpress bushwick quinoa cred DIY VHS woke trust fund. Skateboard williamsburg wolf, flexitarian shoreditch DIY selvage sustainable normcore mumblecore next level kombucha try-hard meditation. Gentrify plaid microdosing, master cleanse ugh crucifix pop-up. Wolf bushwick street art tumeric. Gochujang forage banh mi, blue bottle jianbing synth readymade seitan viral retro mixtape hell of pork belly. Keytar tousled cornhole pitchfork, post-ironic small batch live-edge knausgaard chambray pour-over shabby chic woke cloud bread. Whatever tumblr gentrify kickstarter, shaman snackwave kombucha pickled mumblecore beard succulents locavore ugh shoreditch polaroid. Wayfarers crucifix tattooed twee. Yr listicle crucifix fingerstache farm-to-table. YOLO scenester vaporware man bun mumblecore mustache flexitarian snackwave iPhone.
+## Contexto del problema
 
-Hella lo-fi banjo, disrupt tofu prism raclette. Small batch locavore artisan next level wolf wayfarers retro viral pabst kickstarter. Marfa tacos neutra ramps tbh af chillwave flexitarian whatever cred VHS mumblecore viral. Hell of retro vegan chambray tacos VHS four dollar toast tote bag. Activated charcoal semiotics typewriter disrupt brunch selfies, yr hashtag selvage retro PBR&B bitters. Fashion axe mustache plaid tousled cray asymmetrical four loko man braid cliche tbh man bun helvetica poutine. Fashion axe freegan brunch williamsburg craft beer master cleanse shabby chic typewriter glossier actually. Plaid tumblr hexagon neutra slow-carb mumblecore. Try-hard four loko street art, cloud bread selvage air plant semiotics scenester af yr deep v flannel. Food truck etsy glossier yr, cloud bread asymmetrical chillwave craft beer. Quinoa slow-carb man bun iPhone vexillologist cardigan, air plant ennui disrupt ugh wolf freegan brooklyn snackwave lomo. Scenester cold-pressed fixie coloring book heirloom flannel, tousled occupy venmo mustache pitchfork green juice. VHS neutra 8-bit roof party. Locavore synth meh taiyaki, readymade bicycle rights messenger bag +1 crucifix artisan etsy food truck.
+FreshMart busca entregar la experiencia personalizada a sus clientes y para ello necesita identificar los diferentes segmentos que se encuentran en su clientela, es por ello que se utilizará técnicas de aprendizaje no supervisado para agrupar aquellos perfiles  según sus patrones de compra. La base de datos contiene información a nivel de boleta de un año del supermercado FreshMart.
 
-### Pour-over blue bottle woke listicle
+## Objetivos de Negocio
 
-Pour-over blue bottle woke listicle, pitchfork 90's post-ironic scenester poutine ennui four loko ramps kickstarter. Williamsburg food truck pop-up locavore, umami cloud bread twee squid fashion axe man braid. Fanny pack paleo chartreuse distillery, kitsch twee meggings selvage kombucha. Keffiyeh actually prism listicle. Taxidermy authentic iPhone migas vegan copper mug. Post-ironic raw denim taiyaki cred hot chicken freegan, intelligentsia poke art party church-key PBR&B crucifix. Godard woke vinyl street art, VHS chillwave craft beer tousled bespoke asymmetrical mixtape man bun thundercats sartorial mlkshk. Meggings heirloom XOXO gentrify try-hard stumptown. Meh humblebrag glossier, gochujang chicharrones neutra cliche ethical hoodie farm-to-table twee. Messenger bag offal pug bespoke, put a bird on it tote bag literally.
 
-Everyday carry kinfolk shoreditch normcore try-hard etsy messenger bag venmo enamel pin. Try-hard fanny pack thundercats farm-to-table retro twee. Godard photo booth tofu 90's. Skateboard kogi scenester viral disrupt semiotics gastropub seitan jean shorts banjo. Humblebrag knausgaard waistcoat mixtape. Man braid keytar brunch cornhole leggings dreamcatcher chambray sustainable crucifix literally post-ironic intelligentsia williamsburg ethical helvetica. Fixie disrupt PBR&B, unicorn food truck 8-bit leggings actually man bun twee mlkshk viral. Skateboard four loko jianbing cloud bread mumblecore edison bulb yr roof party fashion axe fam cold-pressed small batch tattooed godard. Bushwick yuccie thundercats schlitz listicle skateboard quinoa. Gentrify hot chicken pop-up keytar master cleanse pork belly. Irony pitchfork la croix neutra freegan. Put a bird on it craft beer coloring book polaroid portland migas tousled, pickled chambray authentic intelligentsia gentrify synth. Letterpress tumblr wolf normcore selvage. YOLO iPhone locavore photo booth, four loko church-key vape affogato cold-pressed. Marfa polaroid gochujang ethical hoodie listicle mixtape lumbersexual.
+- Agrupar clientes en segmentos accionables y diferenciables.
+- Comprender hábitos de compra, frecuencia y gasto de cada grupo.
+- Facilitar campañas personalizadas de marketing para cada segmento.
+
+## Exploración y preparación de los datos
+
+- [📁 Dataset del proyecto]()
+
+La información en un inicio se encuentra distribuida de la siguiente manera
+
+(df.head)
+
+Las definiciones de las variables representan la siguiente información
+
+- InvoiceNo: Nro identificador de cada boleta
+- InvoiceDate: Fecha de la boleta
+- CustomerId: Nro identificador de cada usuario
+- Quantity: Cantidad de unidades totales compradas
+- price_total: Precio total de la boleta
+- StockCode: Cantidad de unidades diferentes compradas
+
+df.info
+
+Para la limpieza y preparación de los datos se denota la siguiente información
+
+(datasets con datos implícitos)
+
+
+Durante la investigación del dataset se encontraron facturas con el prefijo C. Estos valores en cantidad y precio total presentan un número negativo. La anomalía puede tratarse por varias razones como devoluciones de productos o correciones en el stock o inventario. Sin embargo, debido a la inexactitud de la pertenencia de estos valores, se opta por eliminarlos aunque representen el 16& del dataset. Se debe agregar que es importante monitorear su comportamiento y estado a lo largo del tiempo ya que puede representar un motivo de análisis e investigación para corregir estos eventos ya sea una mala práctica de inventario o mala calidad del producto si se refiere a devoluciones.
+
+(mostrar los datos que tienen el prefijo de C)
+
+Además es importante aclarar que en el dataset hay una elevada cantidad de valores atípicos como se logra apreciar en los gráficos de más abajo para las variables de Quantity, price_total y StockCode. Estos valores serán eliminados del dataset.
+
+(mostrar el antes y después en gráficos de las tres variables)
+
+
+## Transformación de Variables (RFM)
+
+Como se mencionó más arriba la distribución del dataset se encuentra a nivel de facturas y el objetivo del proyecto es analizar y segmentar los clientes del supermercado de FreshMart, es por ello que se realizará una transformación en la distribución del dataset por CustomerID agregando las variables última compra, frecuencia de compra (cantidad de veces que el cliente decidió comprar), promedio de artículos adquiridos, artículos totales comprados, promedio del monto de compra, monto total de compra y promedio de artículos distintos comprados. La tabla quedo de la siguiente manera:
+
+
+(df_seg)
+
+## Análisis
+
+En lo que respecta a la distrubución de la data finalmente tenemos información de aproximadamente 4000 clientes durante un año calendario del supermercado FreshMart. A pesar de haber eliminado valores atípicos usando el rango intercuartil, siguen presentándose valores fuera de la norma en las variables cuantitativas como se muestra en el gráfico de más abajo.
+
+(Gráfico de análisis)
+
+Aquí se muestran las correlaciones exstentes a lo largo del dataset de las variables cuantitativas.
+
+(Gráfico de correlaciones)
+
+## Clustering y Evaluación
+
+Respecto a los algoritmos de clustering y evaluación se proceden a utiizar dos algoritmos; el primero de ellos es K-means; y el segundo es Fuzzy C-means debido a que todas las variables se presentan en formato cuantitativo y no se presenta información cualitativa que impida el uso de ambos modelos. 
+
+Debido a que ambos algoritmos son sensibles a la inicialización se procede a utlizar un rango preajustado de clusters entre 2-11 para luego calcular las metricas de Silhouette, Davies_bouldin y el método del codo para su posterior visualización con el fin de determinar el óptimo número de clusters para el dataset.
+
+
+(gráfico de silhouette, davies-bouldin y método del codo de K-means)
+
+Arriba se muestran los tres gráficos del algoritmo K-means. Tanto Silhouette como Davies-bouldin muestran que el óptimo número de clusters para el modelo son 4 clusters por lo que se procede instanciar con 4 clusters.
+
+(gráfico de división de clusters)
+
+Respecto a la visualización de más arriba se destaca el uso de reducción de dimensionalidad a través de PCA para la visualización. Los resultados de las metricas de Silohouette y Davies Bouldin son las siguientes:
+
+(metricas de evaluación de Silhouette and Davies-Bouldin)
+
+
+(gráfico de silohouette, para fuzzy c-means)
+
+El gráfico de arriba muestra el cálculo ideal de clusters para fuzzy c-means con un valor de m de 1.4 muy cercano a 1, es decir, una división un poco rígida casi similar a k-means.
+
+(gráfico de dvisión de clusters)
+
+Similar a k-means se utilizo PCA para la visualización y los resultados de las métricas para Fuzzy C-means son las siguientes.
+
+metricas de evaluación de Silhouette and Davies Bouldin)
+
+## Segmentos y conclusiones
+
+Para la segmentación y conclusiones traemos a la palestra los resultados de las metricas para K-means y Fuzzy C-means. Dentro de estos resultados podemos obtener los siguientes.
+
+(traer nuevamente las metricas para ambos algoritmos)
+
+Observando los valores de Silhouette y Davies Bouldin se concluye que K-means tiene un mejor resultado para los clusters del dataframe que Fuzzy C-means, sin embargo, estos valores no son perfectos y hay oportunidad de mejora. Si bien tenemos 4000 registros, se recomienda recopilar más información respecto a nuevos y actuales clientes por al menos otro año, además considerar agregar mas atributos como la categoría de productos que se adquieren.
+
+A continuación habiendo elegido K-means como mejor modelo se procede a realizar la segmentación de estos clientes acorde a sus características.
+
+### Clientes ocasionales
+
+Con una frecuencia de compra baja comparada al resto de segmentos al igual que el total de compra y cantidad de productos, estos clientes se presentan como un tipo de compradores ocasionales que visitan la zona o se encuentran de paso hacia un destino en particular. Este número es el más alto lo que puede indicar que la geolocalización del supermercado es cercana a algún lugar turístico o cercano a un lugar donde se suele reunir una gran cantidad de gente por periodos estacionales durante la temporada. Todo esto considerando que la separación entre clusters es muy baja. Considerando la información anterior, sería de gran utlilidad para un futuro análisis saber si el supermercado es cercano a algún lugar turístico o frecuenta gran cantidad de personas de ser así, en fechas donde hay una gran afluencia de personas generar eventos de activación de marca presenciales y a través de las redes sociales. Aunque se debe considerar que es peligroso que la mayor cantidad de clientes sea de este tipo.
+
+(df_seg.query('Cluster_K_means == 0').describe()[:7])
+
+
+### Buscadores de ofertas
+
+Se caracteriza por tener una frecuencia de compra baja en promedio 2. Sin embargo, en promedio compran cerca de 31 productos diferentes que señala una elevada cantidad comparado con el resto de clusters. Usualmente los supermercados presentan cambios de temporada si es que deben renovar productos por vencimiento o adquisición de nuevos, como electrodomesticos, muebles o ropa. Estos clientes están en búsquedas de estas ofertas y se acercan a comprarlas en el verano e invierno, como por ejemplo en Chile cuando llegan turistas de Argentina. 
+
+Con una frecuencia de compra similar a los clientes ocasionales pero un significativo aumento en la cantidad de productos, compra total y la compra de productos diferentes mas alta del segmento , estos clientes se pueden clasificar como buscadores de ofertas. Estos clientes aparecen en cambios de temporada, renovación de stock de productos electrodomésticos (si es que el supermercado ofrece), ropa, entre otros. Como bien lo dice el nombre estos clientes buscan ofertas en periodos específicos del año como por ejemplo, en Chile exista una migración por parte de Argentinos debido a que los precios a productos electrodomésticos son más baratos en nuestro país. La estrategia que se pude tomar con este tipo de clientes es ofrecer descuentos en volumenes de productos y promociones por tiempo limitado si es que el negocio e identidad del supermercado hace fit con esta estrategia.
+
+(cl_ofertas_desc = df_seg.query('Cluster_K_means == 1').describe()[:7])
+
+### Clientes Fieles
+
+
+
+
+
+
