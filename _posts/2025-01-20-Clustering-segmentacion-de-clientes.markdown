@@ -8,14 +8,14 @@ tags: [Segmentación, Clustering] # add tag
 
 ## Índice
 
-1. [Contexto del Problema](#contexto-del-problema)
-2. [Objetivos de Negocio](#objetivos-de-negocio)
-3. [Exploración y Preparación de los Datos](#exploración-y-preparación-de-los-datos)
-4. [Transformación de Variables (RFM)](#ingeniería-de-variables-rfm)
-5. [Análisis](Análisis)
-6. [Clustering y Evaluación](#clustering-y-evaluación)
-7. [Segmentos y Conclusiones](#segmentos-y-conclusiones)
-8. [Repositorio del Código](#repositorio-del-código)
+- [Contexto del Problema](#contexto-del-problema)
+- [Objetivos de Negocio](#objetivos-de-negocio)
+- [Exploración y Preparación de los Datos](#exploración-y-preparación-de-los-datos)
+- [Transformación de Variables (RFM)](#ingeniería-de-variables-rfm)
+- [Análisis](Análisis)
+- [Clustering y Evaluación](#clustering-y-evaluación)
+- [Segmentos y Conclusiones](#segmentos-y-conclusiones)
+- [Repositorio del Código](#repositorio-del-código)
 
 ## Contexto del problema
 
