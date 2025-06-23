@@ -124,15 +124,19 @@ Con una frecuencia de compra baja comparada al resto de segmentos al igual que e
 
 ### Buscadores de ofertas
 
-Se caracteriza por tener una frecuencia de compra baja en promedio 2. Sin embargo, en promedio compran cerca de 31 productos diferentes que señala una elevada cantidad comparado con el resto de clusters. Usualmente los supermercados presentan cambios de temporada si es que deben renovar productos por vencimiento o adquisición de nuevos, como electrodomesticos, muebles o ropa. Estos clientes están en búsquedas de estas ofertas y se acercan a comprarlas en el verano e invierno, como por ejemplo en Chile cuando llegan turistas de Argentina. 
-
 Con una frecuencia de compra similar a los clientes ocasionales pero un significativo aumento en la cantidad de productos, compra total y la compra de productos diferentes mas alta del segmento , estos clientes se pueden clasificar como buscadores de ofertas. Estos clientes aparecen en cambios de temporada, renovación de stock de productos electrodomésticos (si es que el supermercado ofrece), ropa, entre otros. Como bien lo dice el nombre estos clientes buscan ofertas en periodos específicos del año como por ejemplo, en Chile exista una migración por parte de Argentinos debido a que los precios a productos electrodomésticos son más baratos en nuestro país. La estrategia que se pude tomar con este tipo de clientes es ofrecer descuentos en volumenes de productos y promociones por tiempo limitado si es que el negocio e identidad del supermercado hace fit con esta estrategia.
 
 (cl_ofertas_desc = df_seg.query('Cluster_K_means == 1').describe()[:7])
 
 ### Clientes Fieles
 
+En el cluster número 3 tenemos clientes que tienen el segundo monto total más alto, presentan una media de 15 visitas al supermercado al año y un gasto promedio de 330. Se clasificarían como los compradores regulares o fieles que abastecen todas sus necesidades con aproximadamente una visita por mes al supermercado. A nivel general no solo en este segmento lo que se puede hacer es crear un programa de fidelización que permita ofrecer a todos los clientes acorde a sus comportamientos de compra las mejores ofertas.
 
+cl_fieles_desc = df_seg.query('Cluster_K_means == 3').describe()[:7]
+
+### Outliers
+
+Encontramos en el cluster numero 2, 9 elementos que sobresalen de toda norma y medio, se van totalmente al extremo en cantidades compradas y totales lo que recibiran el nombre de OUTLIERS sera interesante investigar mas sobre estos 9 clientesya que puede deberse a que por su comportamiento de compra se pueda tratar de negocios minoristas que se mueven a un supermercado central (teoría de geolocalización) para comprar y vender en zonas más alejadas a lugares con una gran afluencia de clientes. Se puede tomar una perspectiva colaborativa y ofrecer el despacho de estos productos a los revendedores o comerciantes si es que se desea fidelizar y ofrecer el servicio completo. 
 
 
 
