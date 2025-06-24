@@ -74,11 +74,11 @@ Como se mencionó más arriba la distribución del dataset se encuentra a nivel 
 
 En lo que respecta a la distrubución de los datos finalmente tenemos información de aproximadamente 4000 clientes durante un año calendario del supermercado FreshMart. A pesar de haber eliminado valores atípicos usando el rango intercuartil, siguen presentándose valores fuera de la norma en las variables cuantitativas como se muestra en el gráfico de más abajo.
 
-[](assets/cluster/jpg/EDA.jpg)
+![Alt text](/assets/img/seg/EDA.jpg)
 
 Aquí se muestran las correlaciones existentes a lo largo del dataset de las variables cuantitativas.
 
-(Gráfico de correlaciones)
+![Alt text](/assets/img/seg/cor.jpg)
 
 ## Clustering y Evaluación
 
@@ -87,32 +87,38 @@ Respecto a los algoritmos de clustering y evaluación se proceden a utiizar dos 
 Debido a que ambos algoritmos son sensibles a la inicialización se procede a utlizar un rango preajustado de clusters entre 2-11 para luego calcular las metricas de Silhouette, Davies_bouldin y el método del codo para su posterior visualización con el fin de determinar el óptimo número de clusters para el dataset en ambos modelos.
 
 
-(gráfico de silhouette, Davies-Bouldin y método del codo de K-means)
+![Alt text](/assets/img/seg/k_m_f.jpg)
 
 Arriba se muestran los tres gráficos del algoritmo K-means. Tanto Silhouette como Davies-Bouldin muestran que el óptimo número de clusters para el modelo son 4 clusters por lo que se procede instanciar con 4 clusters.
 
-(gráfico de división de clusters)
+![Alt text](/assets/img/seg/clus_k_m.jpg)
 
 Respecto a la visualización de más arriba se destaca el uso de reducción de dimensionalidad a través de PCA para la visualización. Los resultados de las metricas de Silhouette y Davies-Bouldin son las siguientes:
 
-(metricas de evaluación de Silhouette and Davies-Bouldin)
+- K-Means Silhouette Score: 0.35010922125461674
+- K-Means Davies Bouldin Score: 0.9688725504594399
 
 
-(gráfico de silohouette, para fuzzy c-means)
+![Alt text](/assets/img/seg/f_c_f.jpg)
 
 El gráfico de arriba muestra el cálculo ideal de clusters para fuzzy c-means con un valor de m de 1.4 muy cercano a 1, es decir, una división un poco rígida casi similar a K-means.
 
-(gráfico de dvisión de clusters)
+![Alt text](/assets/img/seg/clus_f_m.jpg)
 
 Similar a K-means se utilizo PCA para la visualización y los resultados de las métricas para Fuzzy C-means son las siguientes.
 
-metricas de evaluación de Silhouette and Davies Bouldin)
+- Fuzzy C-Means Silhouette Score: 0.34022744188059084
+- Fuzzy C-Means Davies Bouldin Score: 1.0839801221997591
 
 ## Segmentos y conclusiones
 
 Para la segmentación y conclusiones traemos a la palestra los resultados de las metricas para K-means y Fuzzy C-means. Dentro de estos resultados podemos obtener los siguientes.
 
-(traer nuevamente las metricas para ambos algoritmos)
+- K-Means Silhouette Score: 0.35010922125461674
+- K-Means Davies Bouldin Score: 0.9688725504594399
+
+- Fuzzy C-Means Silhouette Score: 0.34022744188059084
+- Fuzzy C-Means Davies Bouldin Score: 1.0839801221997591
 
 Observando los valores de Silhouette y Davies-Bouldin se concluye que K-means tiene un mejor resultado para los clusters del dataframe que Fuzzy C-means, sin embargo, estos valores no son perfectos y hay oportunidad de mejora. Si bien tenemos 4000 registros, se recomienda recopilar más información respecto a nuevos y actuales clientes por al menos otro año, además considerar agregar mas atributos como la categoría de productos que se adquieren.
 
