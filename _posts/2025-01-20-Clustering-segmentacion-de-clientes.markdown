@@ -30,7 +30,7 @@ FreshMart busca entregar una experiencia personalizada a sus clientes y para ell
 
 ## Exploración y preparación de los datos
 
-- [📁 Dataset del proyecto]()
+- [📁 Dataset del proyecto](Retail_Invoices.xlsx)
 
   Las definiciones de las variables representan la siguiente información
 
@@ -74,7 +74,7 @@ Como se mencionó más arriba la distribución del dataset se encuentra a nivel 
 
 En lo que respecta a la distrubución de los datos finalmente tenemos información de aproximadamente 4000 clientes durante un año calendario del supermercado FreshMart. A pesar de haber eliminado valores atípicos usando el rango intercuartil, siguen presentándose valores fuera de la norma en las variables cuantitativas como se muestra en el gráfico de más abajo.
 
-(Gráfico de análisis)
+[](assets/cluster/jpg/EDA.jpg)
 
 Aquí se muestran las correlaciones existentes a lo largo del dataset de las variables cuantitativas.
 
@@ -147,8 +147,8 @@ df_seg.query('Cluster_K_means == 2').describe()[:7]
 
 Abajo se encuentra nuevamente el dataset del proyecto así como tambien el código y ejecución de los algoritmos.
 
-- [📁 Dataset del proyecto]()
-- [🗃️ Implementación del algoritmo]()
+- [📁 Dataset del proyecto](assets/cluster/Retail_Invoices.xlsx)
+- [🗃️ Implementación del algoritmo](assets/cluster/Clustering.ipynb)
 
 
 
