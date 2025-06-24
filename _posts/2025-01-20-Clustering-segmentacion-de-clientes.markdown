@@ -47,8 +47,6 @@ La información en un inicio se encuentra distribuida de la siguiente manera:
 
 Durante la investigación del dataset se encontraron facturas con el prefijo C. Estos valores en cantidad y precio total presentan un número negativo. La anomalía puede tratarse por varias razones como devoluciones de productos o correciones en el stock o inventario. Sin embargo, debido a la inexactitud de la pertenencia de estos valores, se opta por eliminarlos aunque representen el 16% del dataset. Se debe agregar que es importante monitorear su comportamiento y estado a lo largo del tiempo ya que puede representar un motivo de análisis e investigación para corregir estos eventos ya sea una mala práctica de inventario o mala calidad del producto si se refiere a devoluciones.
 
-(mostrar los datos que tienen el prefijo de C)
-
 
 ![Alt text](/assets/img/seg/df_c_val.jpg)
 
