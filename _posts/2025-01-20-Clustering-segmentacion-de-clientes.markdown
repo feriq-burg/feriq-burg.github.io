@@ -138,6 +138,3 @@ Abajo se encuentra nuevamente el dataset del proyecto así como tambien el códi
 
 - [📁 Dataset del proyecto](assets/cluster/Retail_Invoices.xlsx)
 - [🗃️ Implementación del algoritmo](assets/cluster/Clustering.ipynb)
-
-
-
