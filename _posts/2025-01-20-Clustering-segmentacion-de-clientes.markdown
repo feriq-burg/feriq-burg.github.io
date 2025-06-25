@@ -30,7 +30,8 @@ FreshMart busca entregar una experiencia personalizada a sus clientes y para ell
 
 ## Exploración y preparación de los datos
 
-- [📁 Dataset del proyecto](Retail_Invoices.xlsx)
+- 📁 [Dataset del proyecto](Retail_Invoices.xlsx)
+- [Script de creación de tablas](/assets/sql/creacion_tablas_v1.sql) 
 
   Las definiciones de las variables representan la siguiente información
 
@@ -136,5 +137,5 @@ Encontramos en el cluster numero 2, 9 elementos que sobresalen de toda norma y m
 
 Abajo se encuentra nuevamente el dataset del proyecto así como tambien el código y ejecución de los algoritmos.
 
-- [📁 Dataset del proyecto](assets/cluster/Retail_Invoices.xlsx)
-- [🗃️ Implementación del algoritmo](assets/cluster/Clustering.ipynb)
+- 📁 [Dataset del proyecto](assets/cluster/Retail_Invoices.xlsx)
+- 🗃️ [Implementación del algoritmo](assets/cluster/Clustering.ipynb)
